@@ -1,4 +1,4 @@
-package com.calm.general;
+package com.calm.java;
 
 public class Main {
     public static void main(String[] args) {
