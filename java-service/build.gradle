@@ -6,6 +6,9 @@ group = 'com.calm.java'
 version = '1.0-SNAPSHOT'
 
 repositories {
+    maven {
+        url "https://maven.aliyun.com/repository/public"
+    }
     mavenCentral()
 }
 
@@ -13,8 +16,11 @@ dependencies {
     // modify junit configuration implementation
     implementation platform("org.junit:junit-bom:${libs.versions.junit.get()}")
     implementation 'org.junit.jupiter:junit-jupiter'
-    implementation libs.lombok
+    // Lombok 注解处理器
+    annotationProcessor(libs.lombok)
+    implementation libs.bundles.log
 }
+
 
 test {
     useJUnitPlatform()
